@@ -2,9 +2,9 @@ import flatpickr from 'flatpickr';
 
 import 'flatpickr/dist/flatpickr.min.css';
 
+require('flatpickr/dist/themes/dark.css');
+
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-
-
 
 // class CountdownTimer {
 //   constructor({ selector, targetDate }) {
@@ -26,6 +26,8 @@ const refs = {
   minsSpan: document.querySelector('[data-minutes]'),
   secsSpan: document.querySelector('[data-seconds]'),
 };
+
+document.body.style.backgroundColor = 'yellow';
 
 //   updateTimer() {
 //     setInterval(() => {
@@ -61,8 +63,8 @@ let timerId = null;
 
 const options = {
   enableTime: true,
-    // altInput: true,
-    // weekNumbers: true,
+  // altInput: true,
+  // weekNumbers: true,
   time_24hr: true,
   defaultDate: new Date(),
   minuteIncrement: 1,
